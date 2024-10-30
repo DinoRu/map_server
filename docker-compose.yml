@@ -7,7 +7,7 @@ services:
       - '4080:4080'
     environment:
       - NODE_ENV=production
-      - DB_HOST=db
+      - DB_HOST=mdb
       - DB_USER=postgres
       - DB_PASSWORD=login123!
       - DB_NAME=map_coordinates
@@ -18,7 +18,7 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
   mdb:
-    image: postgres:14
+    image: postgres
     restart: always
     environment:
       POSTGRES_USER: postgres
