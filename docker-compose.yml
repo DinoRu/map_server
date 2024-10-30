@@ -13,11 +13,11 @@ services:
       - DB_NAME=map_coordinates
       - DB_PORT=5432
     depends_on:
-      - db
+      - mdb
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
-  db:
+  mdb:
     image: postgres:14
     restart: always
     environment:
